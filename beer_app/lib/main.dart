@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'BeerListPage.dart';
+import 'GeneratePage.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+Future<void> main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
@@ -55,6 +59,11 @@ class _MyHomePageState extends State<MyHomePage> {
         context,
         MaterialPageRoute(builder: (context) => const BeerListPage()),
       );
+    } else if (index == 2) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const GeneratePage()),
+      );
     }
   }
 
@@ -100,7 +109,35 @@ class _MyHomePageState extends State<MyHomePage> {
                   Icon(Icons.local_drink, size: 28), // ← ビールアイコン
                   SizedBox(height: 4),
                   Text(
-                    'ビールのうんちくを探す',
+                    'ビールのうんちくを選ぶ',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const GeneratePage()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white, // 背景白
+                foregroundColor: Colors.teal,  // 文字色
+                side: const BorderSide(color: Colors.teal), // 枠線
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.zero, // 四角形にする
+                ),
+              ),
+              child: const Column(
+                children: [
+                  Icon(Icons.search, size: 28),
+                  SizedBox(height: 4),
+                  Text(
+                    'お酒のうんちくを探す',
                     style: TextStyle(fontSize: 16),
                   ),
                 ],
@@ -116,10 +153,13 @@ class _MyHomePageState extends State<MyHomePage> {
             label: 'ホーム',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.local_drink),
-            label: '検索',
+            icon: Icon(Icons.list_alt),
+            label: '選ぶ',
           ),
-        ],
+          BottomNavigationBarItem(
+            icon: Icon(Icons.auto_awesome),
+            label: '探す',
+          ),        ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.teal,
         onTap: _onItemTapped,
