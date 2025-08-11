@@ -4,7 +4,6 @@ import '../../viewmodels/generate_viewmodel.dart';
 import '../../utils/constants.dart';
 import '../../utils/theme.dart';
 import '../widgets/loading_widget.dart' as custom_widgets;
-import 'beer_detail_page.dart';
 
 class GeneratePage extends StatefulWidget {
   const GeneratePage({super.key});
@@ -100,7 +99,7 @@ class _GeneratePageState extends State<GeneratePage> {
     }
 
     return const custom_widgets.EmptyWidget(
-      message: 'お酒の名前を入力してうんちくを生成してください',
+      message: 'ご飯の名前を入力してうんちくを生成してください',
       icon: Icons.search,
     );
   }
@@ -122,24 +121,9 @@ class _GeneratePageState extends State<GeneratePage> {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Row(
-                children: [
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => BeerDetailPage(beer: beer),
-                        ),
-                      );
-                    },
-                    child: const Text('詳細表示'),
-                  ),
-                  IconButton(
-                    onPressed: viewModel.clearResult,
-                    icon: const Icon(Icons.close),
-                  ),
-                ],
+              IconButton(
+                onPressed: viewModel.clearResult,
+                icon: const Icon(Icons.close),
               ),
             ],
           ),
