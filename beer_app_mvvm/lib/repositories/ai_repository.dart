@@ -12,7 +12,7 @@ class AiRepository {
   Future<AsyncResult<BeerData>> generateBeerData(String beerName) async {
     if (beerName.trim().isEmpty) {
       return AsyncResult.error(
-        AppException(AppError.parsing, 'ビール名を入力してください'),
+        AppException(AppError.parsing, 'ごはん名を入力してください'),
       );
     }
 

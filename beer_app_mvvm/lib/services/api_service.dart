@@ -35,10 +35,12 @@ class ApiService {
           'model': 'gpt-4o',
           'messages': [
             {
-              'role': 'system',
+              'role': 'user',
               'content': prompt,
             }
-          ]
+          ],
+          'max_tokens': 500,
+          'temperature': 0.9,
         }),
       );
 

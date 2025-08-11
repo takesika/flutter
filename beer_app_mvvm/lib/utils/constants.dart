@@ -17,6 +17,8 @@ class AppConstants {
   static const String apiKeyError = 'APIキーが設定されていません';
   static const String unknownError = '予期しないエラーが発生しました';
   static const String emptyInputError = 'ご飯の名前を入力してください';
+  static const String validationError = '入力内容に問題があります';
+  static const String rateLimitError = '利用制限に達しました。しばらくお待ちください';
   
   // Loading Messages
   static const String generating = 'うんちくを生成中...';
