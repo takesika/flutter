@@ -17,7 +17,7 @@ class InputValidator {
     if (input.trim().isEmpty) {
       return ValidationResult(
         isValid: false,
-        errorMessage: 'お酒の名前を入力してください',
+        errorMessage: 'ご飯の名前を入力してください',
       );
     }
     
@@ -26,14 +26,14 @@ class InputValidator {
     if (trimmedInput.length < minLength) {
       return ValidationResult(
         isValid: false,
-        errorMessage: '${minLength}文字以上入力してください',
+        errorMessage: '$minLength文字以上入力してください',
       );
     }
     
     if (trimmedInput.length > maxLength) {
       return ValidationResult(
         isValid: false,
-        errorMessage: '${maxLength}文字以内で入力してください',
+        errorMessage: '$maxLength文字以内で入力してください',
       );
     }
     

@@ -73,7 +73,7 @@ class RateLimiter {
     
     if (timeUntil != null) {
       final seconds = timeUntil.inSeconds;
-      return '${seconds}秒後に再実行できます';
+      return '$seconds秒後に再実行できます';
     }
     
     // 使用制限メッセージを取得

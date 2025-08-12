@@ -149,13 +149,11 @@ class UsageTracker {
     final canMonthly = await canUseThisMonth();
     
     if (!canDaily) {
-      final remaining = await getRemainingDailyUsage();
-      return '本日の利用回数上限（${maxDailyUsage}回）に達しました。明日またお試しください。';
+      return '本日の利用回数上限（$maxDailyUsage回）に達しました。明日またお試しください。';
     }
     
     if (!canMonthly) {
-      final remaining = await getRemainingMonthlyUsage();
-      return '今月の利用回数上限（${maxMonthlyUsage}回）に達しました。来月またお試しください。';
+      return '今月の利用回数上限（$maxMonthlyUsage回）に達しました。来月またお試しください。';
     }
     
     return '';

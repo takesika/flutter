@@ -4,12 +4,10 @@ import '../models/app_state.dart';
 import '../repositories/ai_repository.dart';
 import '../utils/input_validator.dart';
 import '../utils/rate_limiter.dart';
-import '../utils/usage_tracker.dart';
 
 class GenerateViewModel extends ChangeNotifier {
   final AiRepository _aiRepository = AiRepository();
   final RateLimiter _rateLimiter = RateLimiter();
-  final UsageTracker _usageTracker = UsageTracker();
   
   String _inputText = '';
   AsyncResult<BeerData> _generateResult = AsyncResult.idle();

@@ -302,7 +302,7 @@ class _GeneratePageState extends State<GeneratePage> {
         errorMessage = await rateLimiter.getErrorMessage('generate');
       }
       
-      if (errorMessage.isNotEmpty) {
+      if (errorMessage.isNotEmpty && mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(errorMessage),
