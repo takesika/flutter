@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ひとり飯 - プライバシーポリシー</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #ff6b6b;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #4ecdc4;
+            border-bottom: 2px solid #4ecdc4;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #666;
+            margin-top: 25px;
+        }
+        .important-note {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .data-section {
+            background-color: #f8f9ff;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        .contact-info {
+            background-color: #f0fff4;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        a {
+            color: #4ecdc4;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 14px;
+        }
+        .update-date {
+            text-align: right;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔒 プライバシーポリシー</h1>
+        <p style="text-align: center; font-size: 16px; color: #666;">ひとり飯アプリケーション</p>
+        
+        <div class="update-date">
+            最終更新日: 2024年12月12日
+        </div>
+
+        <div class="important-note">
+            <strong>📋 重要なお知らせ</strong><br>
+            本アプリは、ユーザーの皆様のプライバシーを最大限に尊重し、必要最小限のデータのみを取り扱います。このプライバシーポリシーでは、当アプリがどのような情報を収集し、どのように使用するかについて詳しく説明いたします。
+        </div>
+
+        <h2>1. 基本方針</h2>
+        <p>「ひとり飯」（以下「本アプリ」）の開発・運営者（以下「当方」）は、本アプリをご利用いただくユーザーの皆様（以下「ユーザー」）のプライバシー保護を重要視し、個人情報の適切な管理に努めます。</p>
+
+        <h2>2. 収集する情報</h2>
+        
+        <div class="data-section">
+            <h3>2.1 ユーザーが入力する情報</h3>
+            <ul>
+                <li><strong>食事名・料理名:</strong> ユーザーがうんちく生成のために入力する食べ物の名前</li>
+                <li><strong>利用目的:</strong> AIによるうんちく生成のため</li>
+                <li><strong>保存期間:</strong> 生成処理完了後、即座に削除（端末内・サーバー内ともに保存されません）</li>
+            </ul>
+        </div>
+
+        <div class="data-section">
+            <h3>2.2 自動的に収集される情報</h3>
+            <ul>
+                <li><strong>アプリ使用統計:</strong> 日次・月次の利用回数のみ</li>
+                <li><strong>保存場所:</strong> ユーザーの端末内のみ（SharedPreferences使用）</li>
+                <li><strong>保存期間:</strong> アプリ削除まで</li>
+                <li><strong>利用目的:</strong> レート制限機能の実現（1日20回、月600回の制限管理）</li>
+            </ul>
+        </div>
+
+        <div class="data-section">
+            <h3>2.3 収集しない情報</h3>
+            <ul>
+                <li>個人を特定可能な情報（氏名、住所、電話番号、メールアドレス等）</li>
+                <li>端末の位置情報</li>
+                <li>連絡先・写真・カメラ等へのアクセス</li>
+                <li>他のアプリの使用状況</li>
+                <li>生成されたうんちくの内容</li>
+            </ul>
+        </div>
+
+        <h2>3. 第三者サービスの利用</h2>
+        
+        <div class="data-section">
+            <h3>3.1 OpenAI API</h3>
+            <p>本アプリは、うんちく生成のためにOpenAI社のGPT-4o APIを利用しています。</p>
+            <ul>
+                <li><strong>送信データ:</strong> ユーザーが入力した食事名のみ</li>
+                <li><strong>データの取り扱い:</strong> OpenAI社のプライバシーポリシーに従います</li>
+                <li><strong>データ保持:</strong> OpenAI社の規定に従い、API利用完了後に削除されます</li>
+                <li><strong>OpenAI プライバシーポリシー:</strong> <a href="https://openai.com/privacy" target="_blank">https://openai.com/privacy</a></li>
+            </ul>
+        </div>
+
+        <h2>4. データの利用目的</h2>
+        <ul>
+            <li>AIによる食事のうんちく生成サービスの提供</li>
+            <li>アプリの利用制限管理（レート制限機能）</li>
+            <li>サービス品質の向上および改善</li>
+            <li>不正利用の防止</li>
+        </ul>
+
+        <h2>5. データの共有・提供</h2>
+        <p>当方は、以下の場合を除き、ユーザーの情報を第三者に共有・提供することはありません：</p>
+        <ul>
+            <li>ユーザーの明確な同意がある場合</li>
+            <li>法的な義務に基づく場合</li>
+            <li>ユーザーや公衆の安全を保護するために必要な場合</li>
+            <li>OpenAI APIへのうんちく生成リクエスト送信（食事名のみ）</li>
+        </ul>
+
+        <h2>6. データの保護</h2>
+        <ul>
+            <li>適切な技術的・組織的セキュリティ対策を実施</li>
+            <li>不正アクセス、紛失、破壊、改ざんからの保護</li>
+            <li>最小限のデータのみ収集・利用</li>
+            <li>定期的なセキュリティ見直し</li>
+        </ul>
+
+        <h2>7. ユーザーの権利</h2>
+        
+        <div class="data-section">
+            <h3>7.1 データの確認・削除</h3>
+            <ul>
+                <li><strong>利用統計の確認:</strong> アプリ内で現在の利用回数を確認可能</li>
+                <li><strong>データの削除:</strong> アプリをアンインストールすることで、すべてのローカルデータが削除されます</li>
+                <li><strong>利用の停止:</strong> いつでもアプリの使用を停止できます</li>
+            </ul>
+        </div>
+
+        <h2>8. 子どもの保護</h2>
+        <p>本アプリは全年齢対象ですが、13歳未満のお子様が利用される場合は、保護者の方の監督のもとでご利用ください。当方は意図的に13歳未満の児童から個人情報を収集することはありません。</p>
+
+        <h2>9. 国際的なデータ転送</h2>
+        <p>OpenAI APIの利用により、入力された食事名は米国のOpenAI社のサーバーで処理される場合があります。OpenAI社は適切なデータ保護措置を講じています。</p>
+
+        <h2>10. ポリシーの変更</h2>
+        <p>本プライバシーポリシーは、法的要件の変更やサービス改善のために更新される場合があります。重要な変更がある場合は、アプリ内またはサポートページでお知らせいたします。</p>
+
+        <h2>11. 適用法律・管轄裁判所</h2>
+        <ul>
+            <li><strong>準拠法:</strong> 日本法</li>
+            <li><strong>管轄裁判所:</strong> 東京地方裁判所</li>
+            <li><strong>対応法規:</strong> 個人情報保護法、その他関連法令</li>
+        </ul>
+
+        <h2>12. お問い合わせ</h2>
+        <div class="contact-info">
+            <p><strong>プライバシーに関するご質問・ご相談がございましたら、お気軽にお問い合わせください。</strong></p>
+            <p>📧 <strong>連絡先:</strong> <a href="mailto:hitomeshi.support@gmail.com">hitomeshi.support@gmail.com</a></p>
+            <p>⏰ <strong>対応時間:</strong> 平日 9:00-18:00（土日祝日を除く）</p>
+            <p><small>※お返事には2-3営業日お時間をいただく場合があります</small></p>
+        </div>
+
+        <h2>13. 関連文書</h2>
+        <ul>
+            <li><a href="index.html">サポートページ</a></li>
+            <li><a href="terms-of-service.html">利用規約</a></li>
+        </ul>
+
+        <div class="footer">
+            <p>&copy; 2024 ひとり飯. All rights reserved.</p>
+            <p>本アプリはOpenAI GPT-4oを利用しています。</p>
+        </div>
+    </div>
+</body>
+</html>
